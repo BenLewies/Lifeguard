@@ -16,7 +16,7 @@ All projects are built into a single output directory, `Net6Publish`.
 
 ## Setup and Run
 
-Before beginning, please ensure that the .Net 6 runtime is installed on the target machine.
+Before beginning, please ensure that the .Net 6 runtime is installed on the target machine. You can download it from [here](https://dotnet.microsoft.com/download/dotnet/6.0).
 
 1. **Build the solution**: Open the solution in Visual Studio, and build it by clicking `Build -> Build Solution`. All projects are built into the `Net6Publish` directory at the solution root.
 
