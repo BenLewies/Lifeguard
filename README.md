@@ -1,7 +1,3 @@
-Here is the updated `README.md`:
-
----
-
 # Windows Service Monitor
 
 This solution contains a .NET 6 console application `WindowsServiceMonitor` that monitors specified Windows services and restarts them if they stop unexpectedly. It also contains two additional console applications, `InstallApp` and `UninstallApp`, to install and uninstall Windows services.
