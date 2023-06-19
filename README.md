@@ -14,7 +14,7 @@ This solution contains a .NET 6 console application `WindowsServiceMonitor` that
 
 ## Setup and Run
 
-1. **Update build.config**: Update the `build.config` file with the paths to your .NET installation, the output directory for the published applications, and the paths to your project files.
+1. **Update build.json**: Update the `build.json` file with the paths to your .NET installation, the output directory for the published applications, and the paths to your project files.
 
 2. **Build and Publish**: Open a PowerShell window with administrator privileges, navigate to the directory containing the `build-publish.ps1` script, and run the script by typing `.\build-publish.ps1` and pressing Enter.  Note: PowerShell execution policy might prevent the script from running. If that's the case, you can change the execution policy by running Set-ExecutionPolicy Unrestricted in an elevated PowerShell prompt. Be sure to read about PowerShell execution policies and understand the implications before changing them.
 
@@ -40,9 +40,9 @@ The `appsettings.json` file, used by the `WindowsServiceMonitor`, should be in t
 
 Replace `"Service1"`, `"Service2"`, and `"Service3"` with the names of the services you want to monitor.
 
-## build.config
+## build.json
 
-The `build.config` file should be in the same directory as the `build-publish.ps1` script. It contains the paths to your .NET installation, the output directory for the published applications, and the paths to your project files. Here's an example:
+The `build.json` file should be in the same directory as the `build-publish.ps1` script. It contains the paths to your .NET installation, the output directory for the published applications, and the paths to your project files. Here's an example:
 
 ```json
 {
