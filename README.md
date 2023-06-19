@@ -16,7 +16,7 @@ This solution contains a .NET 6 console application `WindowsServiceMonitor` that
 
 1. **Update build.config**: Update the `build.config` file with the paths to your .NET installation, the output directory for the published applications, and the paths to your project files.
 
-2. **Build and Publish**: Open a PowerShell window with administrator privileges, navigate to the directory containing the `build-publish.ps1` script, and run the script by typing `.\build-publish.ps1` and pressing Enter.
+2. **Build and Publish**: Open a PowerShell window with administrator privileges, navigate to the directory containing the `build-publish.ps1` script, and run the script by typing `.\build-publish.ps1` and pressing Enter.  Note: PowerShell execution policy might prevent the script from running. If that's the case, you can change the execution policy by running Set-ExecutionPolicy Unrestricted in an elevated PowerShell prompt. Be sure to read about PowerShell execution policies and understand the implications before changing them.
 
 3. **Run the WindowsServiceMonitor**: Navigate to the directory where the `WindowsServiceMonitor` was published, and run `WindowsServiceMonitor.exe`.
 
