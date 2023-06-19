@@ -17,6 +17,7 @@ namespace InstallApp
                 string serviceExe = Path.Combine(path, $"WindowsServiceMonitor.exe");
 
                 Console.WriteLine("Attempting to install the service...");
+                Console.WriteLine($@"... Resolved monitoring service exe to {serviceExe}");
 
                 using var process = new Process();
                 process.StartInfo.FileName = "sc";

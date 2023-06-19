@@ -26,6 +26,7 @@ public class Program
 public class Worker : BackgroundService
 {
     private readonly string[] _servicesToMonitor;
+    private int _refreshIntervalInSeconds;
 
     public Worker(IHostEnvironment env)
     {
@@ -35,6 +36,7 @@ public class Worker : BackgroundService
             .Build();
 
         _servicesToMonitor = config.GetSection("ServicesToMonitor").Get<string[]>();
+        _refreshIntervalInSeconds = config.GetSection("RefreshIntervalInSeconds").Get<int>();
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -58,7 +60,7 @@ public class Worker : BackgroundService
                 }
             }
 
-            await Task.Delay(1000 * 60, stoppingToken);  //check every minute
+            await Task.Delay(1000 * _refreshIntervalInSeconds, stoppingToken);  //check every 30 seconds
         }
     }
 }

@@ -9,6 +9,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Oo]ut/
 
 # Visual Studio cache files
 *.suo
