@@ -24,6 +24,7 @@ _VS/
 *.pidb
 *.svclog
 *.scc
+*.vsidx
 
 # TFS artifact
 $tf/
