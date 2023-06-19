@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <OutputPath>../out/</OutputPath>
+  </PropertyGroup>
+
+
 </Project>

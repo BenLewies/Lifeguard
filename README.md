@@ -1,4 +1,4 @@
-Sure, here's the updated `README.md`:
+Here is the updated `README.md`:
 
 ---
 
@@ -12,21 +12,23 @@ This solution contains a .NET 6 console application `WindowsServiceMonitor` that
 - **InstallApp** : This application prompts the user for a service name and attempts to install and start a Windows service with that name.
 - **UninstallApp** : This application prompts the user for a service name and attempts to uninstall a Windows service with that name.
 
+All projects are built into a single output directory, `out`.
+
 ## Setup and Run
 
-1. **Update build.json**: Update the `build.json` file with the paths to your .NET installation, the output directory for the published applications, and the paths to your project files.
+1. **Build the solution**: Open the solution in Visual Studio, and build it by clicking `Build -> Build Solution`. All projects are built into the `out` directory at the solution root.
 
-2. **Build and Publish**: Open a PowerShell window with administrator privileges, navigate to the directory containing the `build-publish.ps1` script, and run the script by typing `.\build-publish.ps1` and pressing Enter.  Note: PowerShell execution policy might prevent the script from running. If that's the case, you can change the execution policy by running Set-ExecutionPolicy Unrestricted in an elevated PowerShell prompt. Be sure to read about PowerShell execution policies and understand the implications before changing them.
+2. **Run the WindowsServiceMonitor**: Open a command prompt or terminal, navigate to the `out` directory, and run `dotnet WindowsServiceMonitor.dll`.
 
-3. **Run the WindowsServiceMonitor**: Navigate to the directory where the `WindowsServiceMonitor` was published, and run `WindowsServiceMonitor.exe`.
+3. **Install a service**: Run the `InstallApp` by executing `dotnet InstallApp.dll` in your command prompt or terminal. It will prompt for the service name. Enter the name of the Windows service to install and press enter.
 
-4. **Install a service**: Navigate to the directory where the `InstallApp` was published, and run `InstallApp.exe`. It will prompt for the service name. Enter the name of the Windows service to install and press enter.
+4. **Uninstall a service**: Run the `UninstallApp` by executing `dotnet UninstallApp.dll` in your command prompt or terminal. It will prompt for the service name. Enter the name of the Windows service to uninstall and press enter.
 
-5. **Uninstall a service**: Navigate to the directory where the `UninstallApp` was published, and run `UninstallApp.exe`. It will prompt for the service name. Enter the name of the Windows service to uninstall and press enter.
+Remember that to install and uninstall services, you need administrator privileges.
 
 ## appsettings.json
 
-The `appsettings.json` file, used by the `WindowsServiceMonitor`, should be in the same directory as the `WindowsServiceMonitor.exe` file. It contains an array of strings with the names of the services to monitor. Here's an example:
+The `appsettings.json` file, used by the `WindowsServiceMonitor`, should be in the same directory as the `WindowsServiceMonitor.dll` file. It contains an array of strings with the names of the services to monitor. Here's an example:
 
 ```json
 {
@@ -40,33 +42,6 @@ The `appsettings.json` file, used by the `WindowsServiceMonitor`, should be in t
 
 Replace `"Service1"`, `"Service2"`, and `"Service3"` with the names of the services you want to monitor.
 
-## build.json
-
-The `build.json` file should be in the same directory as the `build-publish.ps1` script. It contains the paths to your .NET installation, the output directory for the published applications, and the paths to your project files. Here's an example:
-
-```json
-{
-    "DestinationPath": "C:\\WindowsServiceMonitor",
-    "DotnetPath": "C:\\Program Files\\dotnet",
-    "Projects": [
-        {
-            "Name": "WindowsServiceMonitor",
-            "ProjectFile": "WindowsServiceMonitor\\WindowsServiceMonitor.csproj"
-        },
-        {
-            "Name": "InstallApp",
-            "ProjectFile": "InstallApp\\InstallApp.csproj"
-        },
-        {
-            "Name": "UninstallApp",
-            "ProjectFile": "UninstallApp\\UninstallApp.csproj"
-        }
-    ]
-}
-```
-
-Replace the paths and project files with your actual paths and project files.
-
 ## Contributions
 
 Contributions, issues, and feature requests are welcome!
@@ -76,4 +51,5 @@ Contributions, issues, and feature requests are welcome!
 This project is [MIT](LICENSE) licensed.
 
 ---
-You can replace `"LICENSE"` in the last line with the path to your actual license file, if you have one.
+
+Please replace `"LICENSE"` in the last line with the path to your actual license file, if you have one.

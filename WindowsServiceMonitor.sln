@@ -8,9 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{29400745-A13E-495E-B618-58106CE0F2BB}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		publish.ps1 = publish.ps1
 		README.md = README.md
-		build.json = build.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Install", "Install\Install.csproj", "{29837B0E-9997-403B-9251-427B7F16C0DF}"
