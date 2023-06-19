@@ -16,6 +16,8 @@ All projects are built into a single output directory, `Net6Publish`.
 
 ## Setup and Run
 
+Before beginning, please ensure that the .Net 6 runtime is installed on the target machine.
+
 1. **Build the solution**: Open the solution in Visual Studio, and build it by clicking `Build -> Build Solution`. All projects are built into the `Net6Publish` directory at the solution root.
 
 2. **Run the WindowsServiceMonitor**: Open a command prompt or terminal, navigate to the `Net6Publish` directory, and run `dotnet WindowsServiceMonitor.dll`.
