@@ -1,51 +1,79 @@
+Sure, here's the updated `README.md`:
+
+---
 
 # Windows Service Monitor
 
-This application monitors specified Windows services and restarts them if they have stopped. It's a .NET Core Worker Service that runs as a Windows service.
+This solution contains a .NET 6 console application `WindowsServiceMonitor` that monitors specified Windows services and restarts them if they stop unexpectedly. It also contains two additional console applications, `InstallApp` and `UninstallApp`, to install and uninstall Windows services.
 
-## Getting Started
+## Project Structure
 
-1. First, clone this repository to your local machine.
+- **WindowsServiceMonitor** : This is the main application that monitors the specified Windows services and restarts them if they stop. The list of services to monitor is read from the `appsettings.json` file at startup.
+- **InstallApp** : This application prompts the user for a service name and attempts to install and start a Windows service with that name.
+- **UninstallApp** : This application prompts the user for a service name and attempts to uninstall a Windows service with that name.
 
-2. Then navigate to the project directory.
+## Setup and Run
 
-3. Run `dotnet restore` to restore the project's dependencies.
+1. **Update build.config**: Update the `build.config` file with the paths to your .NET installation, the output directory for the published applications, and the paths to your project files.
 
-4. Run `dotnet build` to build the project.
+2. **Build and Publish**: Open a PowerShell window with administrator privileges, navigate to the directory containing the `build-publish.ps1` script, and run the script by typing `.\build-publish.ps1` and pressing Enter.
 
-## Configuration
+3. **Run the WindowsServiceMonitor**: Navigate to the directory where the `WindowsServiceMonitor` was published, and run `WindowsServiceMonitor.exe`.
 
-The service names to be monitored are specified in the `appsettings.json` file located in the same directory as the .NET Core application and .bat files. 
+4. **Install a service**: Navigate to the directory where the `InstallApp` was published, and run `InstallApp.exe`. It will prompt for the service name. Enter the name of the Windows service to install and press enter.
 
-Here is an example of what the `appsettings.json` file should look like:
+5. **Uninstall a service**: Navigate to the directory where the `UninstallApp` was published, and run `UninstallApp.exe`. It will prompt for the service name. Enter the name of the Windows service to uninstall and press enter.
+
+## appsettings.json
+
+The `appsettings.json` file, used by the `WindowsServiceMonitor`, should be in the same directory as the `WindowsServiceMonitor.exe` file. It contains an array of strings with the names of the services to monitor. Here's an example:
 
 ```json
 {
-  "ServicesToMonitor": [
-    "Service1",
-    "Service2"
-  ],
-  "ServiceName": "WindowsServiceMonitor"
+    "Services": [
+        "Service1",
+        "Service2",
+        "Service3"
+    ]
 }
 ```
-Replace "Service1" and "Service2" with the names of the services you wish to monitor. The "ServiceName" is the name under which the monitoring service will run.
 
-## Deployment
+Replace `"Service1"`, `"Service2"`, and `"Service3"` with the names of the services you want to monitor.
 
-To deploy the application as a Windows service:
+## build.config
 
-1. Navigate to the project directory.
+The `build.config` file should be in the same directory as the `build-publish.ps1` script. It contains the paths to your .NET installation, the output directory for the published applications, and the paths to your project files. Here's an example:
 
-2. Run `dotnet publish --runtime win-x64 --configuration Release --self-contained true` to publish the application.
+```json
+{
+    "DestinationPath": "C:\\published_apps",
+    "DotnetPath": "C:\\Program Files\\dotnet",
+    "Projects": [
+        {
+            "Name": "WindowsServiceMonitor",
+            "ProjectFile": "WindowsServiceMonitor\\WindowsServiceMonitor.csproj"
+        },
+        {
+            "Name": "InstallApp",
+            "ProjectFile": "InstallApp\\InstallApp.csproj"
+        },
+        {
+            "Name": "UninstallApp",
+            "ProjectFile": "UninstallApp\\UninstallApp.csproj"
+        }
+    ]
+}
+```
 
-3. Copy the published files to your desired directory.
+Replace the paths and project files with your actual paths and project files.
 
-4. Also, ensure the `appsettings.json`, `install.bat`, and `uninstall.bat` files are in the same directory.
+## Contributions
 
-5. Edit 'appsettings.json' to replace "Service1", "Service2", and "WindowsServiceMonitor" with the actual service names as per your requirements.  Run the `install.bat` file with administrator privileges to install and start the service.
-
-6. If you need to uninstall the service, run the `uninstall.bat` file with administrator privileges.
+Contributions, issues, and feature requests are welcome!
 
 ## License
 
-This project is licensed under the MIT License.
+This project is [MIT](LICENSE) licensed.
+
+---
+You can replace `"LICENSE"` in the last line with the path to your actual license file, if you have one.

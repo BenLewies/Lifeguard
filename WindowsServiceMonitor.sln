@@ -8,8 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{29400745-A13E-495E-B618-58106CE0F2BB}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		publish.ps1 = publish.ps1
 		README.md = README.md
+		build.json = build.json
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Install", "Install\Install.csproj", "{29837B0E-9997-403B-9251-427B7F16C0DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uninstall", "Uninstall\Uninstall.csproj", "{52147C66-16AF-4DCF-960C-B8C94C6FDF24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,14 @@ Global
 		{38752779-13BD-4757-B7AC-0480DFD21ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38752779-13BD-4757-B7AC-0480DFD21ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38752779-13BD-4757-B7AC-0480DFD21ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29837B0E-9997-403B-9251-427B7F16C0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29837B0E-9997-403B-9251-427B7F16C0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29837B0E-9997-403B-9251-427B7F16C0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29837B0E-9997-403B-9251-427B7F16C0DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52147C66-16AF-4DCF-960C-B8C94C6FDF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52147C66-16AF-4DCF-960C-B8C94C6FDF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52147C66-16AF-4DCF-960C-B8C94C6FDF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52147C66-16AF-4DCF-960C-B8C94C6FDF24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

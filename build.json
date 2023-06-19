@@ -1,0 +1,18 @@
+{
+  "DestinationPath": "C:\\published_apps",
+  "DotnetPath": "C:\\Program Files\\dotnet",
+  "Projects": [
+    {
+      "Name": "WindowsServiceMonitor",
+      "ProjectFile": "WindowsServiceMonitor\\WindowsServiceMonitor.csproj"
+    },
+    {
+      "Name": "InstallApp",
+      "ProjectFile": "InstallApp\\InstallApp.csproj"
+    },
+    {
+      "Name": "UninstallApp",
+      "ProjectFile": "UninstallApp\\UninstallApp.csproj"
+    }
+  ]
+}
