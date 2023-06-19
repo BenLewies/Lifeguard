@@ -20,9 +20,9 @@ All projects are built into a single output directory, `out`.
 
 2. **Run the WindowsServiceMonitor**: Open a command prompt or terminal, navigate to the `out` directory, and run `dotnet WindowsServiceMonitor.dll`.
 
-3. **Install a service**: Run the `InstallApp` by executing `dotnet InstallApp.dll` in your command prompt or terminal. It will prompt for the service name. Enter the name of the Windows service to install and press enter.
+3. **Install a service**: Run the `InstallApp` by executing `dotnet Install.exe` in your command prompt or terminal. It will prompt for the service name. Enter the name of the Windows service to install and press enter.
 
-4. **Uninstall a service**: Run the `UninstallApp` by executing `dotnet UninstallApp.dll` in your command prompt or terminal. It will prompt for the service name. Enter the name of the Windows service to uninstall and press enter.
+4. **Uninstall a service**: Run the `UninstallApp` by executing `dotnet Uninstall.exe` in your command prompt or terminal. It will prompt for the service name. Enter the name of the Windows service to uninstall and press enter.
 
 Remember that to install and uninstall services, you need administrator privileges.
 
