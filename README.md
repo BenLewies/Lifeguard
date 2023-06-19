@@ -46,7 +46,7 @@ The `build.json` file should be in the same directory as the `build-publish.ps1`
 
 ```json
 {
-    "DestinationPath": "C:\\published_apps",
+    "DestinationPath": "C:\\WindowsServiceMonitor",
     "DotnetPath": "C:\\Program Files\\dotnet",
     "Projects": [
         {
