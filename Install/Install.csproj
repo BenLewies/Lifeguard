@@ -5,11 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <OutputPath>../Net6Publish/</OutputPath>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <OutputPath>../out/</OutputPath>
-  </PropertyGroup>
-
 
 </Project>

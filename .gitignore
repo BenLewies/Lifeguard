@@ -10,6 +10,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Oo]ut/
+[Nn]et6Publish/
 
 # Visual Studio cache files
 *.suo
