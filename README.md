@@ -55,6 +55,3 @@ Contributions, issues, and feature requests are welcome!
 
 This project is [MIT](LICENSE) licensed.
 
----
-
-Please replace `"LICENSE"` in the last line with the path to your actual license file, if you have one.
