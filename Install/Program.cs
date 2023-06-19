@@ -14,7 +14,7 @@ namespace InstallApp
                 string serviceName = Console.ReadLine();
 
                 string path = AppDomain.CurrentDomain.BaseDirectory;
-                string serviceExe = Path.Combine(path, $"{serviceName}.exe");
+                string serviceExe = Path.Combine(path, $"WindowsServiceMonitor.exe");
 
                 Console.WriteLine("Attempting to install the service...");
 
