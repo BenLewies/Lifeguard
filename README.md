@@ -1,6 +1,6 @@
-# Windows Service Monitor
+# Lifeguard
 
-This solution contains a .NET 6 console application `Lifeguard` that monitors specified Windows services and restarts them if they stop unexpectedly. It also contains two additional console applications, `InstallApp` and `UninstallApp`, to install and uninstall Windows services.
+This solution contains a .NET 6 console application `Lifeguard` that monitors specified Windows services and processes and restarts them if they stop unexpectedly. It also contains two additional console applications, `InstallApp` and `UninstallApp`, to install and uninstall Windows services.
 
 ## Project Structure
 
