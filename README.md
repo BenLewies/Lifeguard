@@ -28,20 +28,16 @@ Hint: To run multiple instances of the `Lifeguard`, you can copy the `Net6Publis
 
 ## appsettings.json
 
-The `appsettings.json` file, used by the `Lifeguard`, should be in the same directory as the `Lifeguard.dll` file. It contains an array of strings with the names of the services to monitor. Here's an example:
+The `appsettings.json` file, used by the `Lifeguard`, should be in the same directory as the `Lifeguard.dll` file. It contains an array of strings with the names of the services and processes to monitor. Here's an example:
 
 ```json
 {
-    "Services": [
-        "Service1",
-        "Service2",
-        "Service3"
-    ],
-    "RestartDelaySeconds": 10
+  "ServicesToMonitor": ["Service1","Service2","Service3"],
+  "ProcessesToMonitor": ["C:\\Program Files\\Docker\\Docker\\Docker Desktop.exe"],
+  "RefreshIntervalInSeconds": 30
 }
-```
 
-Replace `"Service1"`, `"Service2"`, and `"Service3"` with the names of the services you want to monitor.  Replace `10` with the number of seconds to wait before restarting a service that has stopped unexpectedly.
+```
 
 ## Contributions
 
