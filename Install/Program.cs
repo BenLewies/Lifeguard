@@ -14,14 +14,18 @@ namespace InstallApp
                 string serviceName = Console.ReadLine();
 
                 string path = AppDomain.CurrentDomain.BaseDirectory;
-                string serviceExe = Path.Combine(path, $"Lifeguard.exe");
+                string serviceExe = Path.Combine(path, "Lifeguard.exe");
+
+                // Wrap executable path and serviceName in quotes to handle spaces.
+                string quotedServiceExe = $"\"{serviceExe}\"";
+                string quotedServiceName = $"\"{serviceName}\"";
 
                 Console.WriteLine("Attempting to install the service...");
                 Console.WriteLine($@"... Resolved monitoring service exe to {serviceExe}");
 
                 using var process = new Process();
                 process.StartInfo.FileName = "sc";
-                process.StartInfo.Arguments = $"create {serviceName} binPath= {serviceExe} start= auto";
+                process.StartInfo.Arguments = $"create {quotedServiceName} binPath= {quotedServiceExe} start= auto";
                 process.StartInfo.UseShellExecute = false;
                 process.Start();
 
@@ -34,7 +38,7 @@ namespace InstallApp
 
                 Console.WriteLine("Service installed successfully. Starting the service...");
 
-                process.StartInfo.Arguments = $"start {serviceName}";
+                process.StartInfo.Arguments = $"start {quotedServiceName}";
                 process.Start();
 
                 process.WaitForExit();
