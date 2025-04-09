@@ -34,8 +34,8 @@ public class Worker : BackgroundService
             .AddJsonFile("appsettings.json", optional: false)
             .Build();
 
-        _servicesToMonitor = config.GetSection("ServicesToMonitor").Get<string[]>();
-        _processesToMonitor = config.GetSection("ProcessesToMonitor").Get<string[]>();
+        _servicesToMonitor = config.GetSection("ServicesToMonitor").Get<string[]>() ?? new string[] { };
+        _processesToMonitor = config.GetSection("ProcessesToMonitor").Get<string[]>() ?? new string[] { };
         _refreshIntervalInSeconds = config.GetSection("RefreshIntervalInSeconds").Get<int>();
     }
 
