@@ -98,3 +98,4 @@ orleans.codegen.cs
 #bower_components/
 
 .vs/
+/.idea/.idea.WindowsServiceMonitor/.idea/.name
